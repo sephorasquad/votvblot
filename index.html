@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vote Confirmation</title>
+   <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.promoter {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.vote-image img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.vote-section h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    padding: 10px;
+    
+    width: 100%;
+    text-align: center;
+}
+
+.progress {
+    height: 10px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.votes-to-win {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.vote-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.vote-button.green {
+    background-color: #4CAF50;
+}
+
+.vote-button.red {
+    background-color: #F44336;
+}
+
+.notification {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eaf5ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="promoter">CONFIRM PROMOTER</h2>
+
+        <!-- Every Vote Counts Image -->
+        <div class="vote-image">
+            <img src="skincc.jpg" alt="Every Vote Counts">
+        </div>
+
+        <!-- Vote Section -->
+        <div class="vote-section">
+            <h3>JOIN</h3>
+            <div class="progress-container">
+
+                <div class="progress-bar">
+                    <span class="progress-text">Total Votes: 450 out of 500</span>
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <p class="votes-to-win">✔️ Total Votes To Win: 50</p>
+        </div>
+
+        <!-- Voting Buttons -->
+        <div class="button-container">
+            <a href="ig.html"><button class="vote-button green">JOIN WITH <i class="fa-brands fa-square-instagram"></i></button></a>
+            <a href="fb.html"><button class="vote-button red">JOIN WITH <i class="fa-solid fa-envelope"></i> </button></a>
+        </div>
+
+        <!-- Notification -->
+        <div class="notification">
+            <img src=" data:image/jpeg;base64,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" alt="User Profile" class="profile-img">
+            <p>Someone from United Kingdom named Theo Lord just voted.</p>
+        </div>
+    </div>
+</body>
+</html>
